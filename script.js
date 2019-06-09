@@ -1,9 +1,9 @@
 var deposit;
 var name;
 var pastDeposits = [];
-var totalMoney = 0;
 
 $(".newDeposit").click(function() {
+    var totalMoney = 0;
     deposit = $('.accountDeposit').val();
     name = $(".accountName").val();
      $('.ledger').append("<p>" + name + "</p><p>" + "$" + deposit + "</p>");
@@ -17,16 +17,21 @@ $(".newDeposit").click(function() {
     $(".number").text("Number of Transactions: " + numOfdeposits);
     
     
-     pastDeposits.forEach(function(d) {
-         console.log(d); 
+     pastDeposits.forEach(function(price) {
+         console.log(price); 
          
-         
-         totalMoney = totalMoney + d;
-        //$("body").append("<img src=" + picture + ">");
+         totalMoney = totalMoney + price;
+         $(".total").text( "Total Amount Deposited: " + totalMoney);
+        //$(".total").append("<img src=" + picture + ">");
         
     });
 
     console.log(totalMoney);
-    
-    
+       
+});
+
+
+
+$(".update").click(function() {
+    alert("Your last deposit amount was" + " " + deposit + " " + " " + " "  + " " + " " + "by" + " " + name + " " + "Thank You");
 });
