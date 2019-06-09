@@ -33,5 +33,6 @@ $(".newDeposit").click(function() {
 
 
 $(".update").click(function() {
-    alert("Your last deposit amount was" + " " + deposit + " " + " " + " "  + " " + " " + "by" + " " + name + " " + "Thank You");
+    alert("Your last deposit amount was" + " " + deposit + " " + "by" + " " + name + " " + " " + " " +
+     " " + " " + " " + "Thank You");
 });
